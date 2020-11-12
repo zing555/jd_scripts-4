@@ -11,11 +11,11 @@ jobs:
       PAT: ${{ secrets.PAT }}
     runs-on: ubuntu-latest
     steps:    
-      - name: Merge upstream -> master	
+      - name: Merge main from master	
         uses: devmasx/merge-branch@v1.3.1	
         if: env.PAT	
         with:	
           type: now	
-          from_branch: upstream	
-          target_branch: master	
+          from_branch: master	
+          target_branch: main	
           github_token: ${{ secrets.PAT }}
